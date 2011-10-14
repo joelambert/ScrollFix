@@ -1,0 +1,50 @@
+html
+{
+	height: 100%;
+}
+
+
+body
+{
+	padding: 0;
+	margin: 0;
+	font-family: helvetica, arial, sans-serif;
+	max-height: 100%;
+}
+
+.scrollable
+{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-flex: 1;
+}
+
+.toolbar
+{
+	-webkit-box-sizing: border-box;
+	padding: 1em;
+	background: #222;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	height: 50px;
+}
+
+ul
+{
+	padding: 0;
+	margin: 0;
+}
+
+li
+{
+	list-style: none;
+	margin: 0;
+	padding: 1em;
+	border-bottom: 1px solid #ccc;
+}
