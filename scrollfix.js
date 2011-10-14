@@ -28,6 +28,12 @@ var ScrollFix = function(elem) {
 		
 		// Reset the lock
 		modifiedY = false;
+		
+		if(startTopScroll == 0)
+			elem.scrollTop = 1;
+
+		if(startTopScroll + elem.offsetHeight == content.offsetHeight)
+			elem.scrollTop = startTopScroll - 1;
 	}, false);
 	
 	// Handle movements
@@ -42,7 +48,7 @@ var ScrollFix = function(elem) {
 			event.stopPropagation();
 		}
 		
-		console.log(startTopScroll, elem.offsetHeight, content.offsetHeight);
+		//console.log(startTopScroll, elem.offsetHeight, content.offsetHeight);
 		
 		// Is the content currently at the bottom?
 		if(startTopScroll + elem.offsetHeight == content.offsetHeight && !modifiedY) {
