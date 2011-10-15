@@ -29,11 +29,14 @@ var ScrollFix = function(elem) {
 		// Reset the lock
 		modifiedY = false;
 		
-		if(startTopScroll == 0)
+		//console.log('start (top):', startTopScroll);
+		//console.log('start (bottom):', startTopScroll + elem.offsetHeight, content.offsetHeight);
+		
+		if(startTopScroll <= 0)
 			elem.scrollTop = 1;
 
-		if(startTopScroll + elem.offsetHeight == content.offsetHeight)
-			elem.scrollTop = startTopScroll - 1;
+		if(startTopScroll + elem.offsetHeight >= content.offsetHeight)
+			elem.scrollTop = content.offsetHeight - elem.offsetHeight - 1;
 	}, false);
 	
 	// Handle movements
