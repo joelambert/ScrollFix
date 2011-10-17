@@ -1,6 +1,6 @@
 # ScrollFix
 
-ScrollFix is a small script that works around the most common issue with using iOS5's `overflow: scroll` for fullscreen web apps.
+ScrollFix is a small script that *partially* works around the most common issue with using iOS5's `overflow: scroll` for fullscreen web apps.
 
 The newly support `overflow:scroll` is a great addition and works well except under the following conditions:
 
@@ -30,6 +30,12 @@ Then call the following code on the area that has the `overflow: scroll` propert
 
 	var scrollable = document.getElementById("scrollable");
 	new ScrollFix(scrollable);
+	
+# Known Issues
+
+ScrollFix doesn't prevent the page from being scrolled when if a touch is registered whilst the scrolling section is bouncing (rubber banding). This is an issue I don't think can be worked around with the current implementation of iOS5's `overflow: scroll`.
+
+[This ticket](https://github.com/joelambert/ScrollFix/issues/1#issuecomment-2421225) better explains the issue, Apple are aware of the problem (thanks to [Matteo Spinelli](http://www.twitter.com/cubiq)), hopefully this will be resolved in iOS 5.1.
 
 # License
 
