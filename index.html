@@ -1,77 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-
-  <title>joelambert/ScrollFix @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #cb53c6;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #34ac39; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #34ac39; }
-    h3 { text-align: center; color: #34ac39; }
-    a { color: #34ac39; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
-
-<body>
-  <a href="http://github.com/joelambert/ScrollFix"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/joelambert/ScrollFix/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/joelambert/ScrollFix/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/joelambert/ScrollFix">ScrollFix</a>
-      <span class="small">by <a href="http://github.com/joelambert">joelambert</a></span></h1>
-
-    <div class="description">
-      Small script to fix some of the issues with iOS5's overflow:scroll;
-    </div>
-
-    <h2>Authors</h2>
-<p>Joe Lambert<br/>      </p>
-<h2>Contact</h2>
-<p>Joe Lambert<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/joelambert/ScrollFix/zipball/master">zip</a> or
-      <a href="http://github.com/joelambert/ScrollFix/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/joelambert/ScrollFix</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/joelambert/ScrollFix">joelambert/ScrollFix</a>
-    </div>
-
-  </div>
-
-  
-</body>
+	<head>
+		<meta charset=utf-8 />
+		<title>ScrollFix Demo</title>
+		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+		<div class="toolbar">Toolbar</div>
+		<div class="scrollable" id="scrollable">
+			<ul>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		</div>
+	</body>
+	<script src="scrollfix.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+		var scrollable = document.getElementById("scrollable");
+		new ScrollFix(scrollable);
+	</script>
 </html>
