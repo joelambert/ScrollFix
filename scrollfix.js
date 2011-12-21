@@ -9,7 +9,7 @@
 
 var ScrollFix = function(elem) {
 	// Variables to track inputs
-	var startY = startTopScroll = deltaY = undefined,
+	var startY, startTopScroll;
 	
 	elem = elem || document.querySelector(elem);
 	
