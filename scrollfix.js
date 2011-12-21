@@ -11,7 +11,7 @@ var ScrollFix = function(elem) {
 	// Variables to track inputs
 	var startY = startTopScroll = deltaY = undefined,
 	
-	elem = elem || elem.querySelector(elem);
+	elem = elem || document.querySelector(elem);
 	
 	// If there is no element, then do nothing	
 	if(!elem)
