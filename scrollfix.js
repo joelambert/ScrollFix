@@ -32,7 +32,7 @@ var ScrollFix = function(elem) {
 	}, false);
   
   // Page should not scroll when the content does not fill the area
-  elem.addEventListener('touchstart', function(event){
+  elem.addEventListener('touchmove', function(event){
     if(disableScroll) {
       event.preventDefault();
     }
