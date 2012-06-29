@@ -25,7 +25,7 @@ var ScrollFix = function(elem) {
 		if(startTopScroll <= 0)
 			elem.scrollTop = 1;
 
-		if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
-			elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+		if(startTopScroll + elem.clientHeight >= elem.scrollHeight)
+			elem.scrollTop = elem.scrollHeight - elem.clientHeight - 1;
 	}, false);
 };
