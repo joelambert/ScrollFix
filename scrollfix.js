@@ -2,8 +2,6 @@
  * ScrollFix v0.1
  * http://www.joelambert.co.uk
  *
- * Modified to add browserify support by Daniel Erickson
- *
  * Copyright 2011, Joe Lambert.
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
