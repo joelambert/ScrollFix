@@ -38,7 +38,7 @@
 
   // if we've got a window and we don't have a module
   // create a global;
-  if (window && (typeof module == 'undefined')) {
+  if ((typeof window != 'undefined') && (typeof module == 'undefined')) {
     window.ScrollFix = ScrollFix;
   }
   // otherwise, export it.
