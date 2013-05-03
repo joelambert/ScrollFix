@@ -1,6 +1,6 @@
 {
   "name": "scrollfix",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Small script to fix some of the issues with iOS5's overflow:scroll;",
   "main": "scrollfix.js",
   "scripts": {
