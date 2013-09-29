@@ -39,4 +39,4 @@ ScrollFix doesn't prevent the page from being scrolled when if a touch is regist
 
 # License
 
-Morf is Copyright &copy; 2011 [Joe Lambert](http://www.joelambert.co.uk) and is licensed under the terms of the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+ScrollFix is Copyright &copy; 2011-2013 [Joe Lambert](http://www.joelambert.co.uk) and is licensed under the terms of the [MIT License](http://www.opensource.org/licenses/mit-license.php).
