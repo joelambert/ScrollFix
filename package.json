@@ -1,0 +1,22 @@
+{
+  "name": "scrollfix",
+  "version": "0.0.2",
+  "description": "Small script to fix some of the issues with iOS5's overflow:scroll;",
+  "main": "scrollfix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Techwraith/ScrollFix.git"
+  },
+  "keywords": [
+    "ios",
+    "browserify",
+    "scroll"
+  ],
+  "author": "joelambert",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "74730600030512323364fd5572f242583cc1bccb"
+}
