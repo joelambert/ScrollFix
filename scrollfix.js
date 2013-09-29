@@ -9,7 +9,7 @@
 
 var ScrollFix = function(elem) {
 	// Variables to track inputs
-	var startY, startTopScroll;
+	var startTopScroll, startLeftScroll;
 	
 	elem = elem || document.querySelector(elem);
 	
@@ -19,13 +19,19 @@ var ScrollFix = function(elem) {
 
 	// Handle the start of interactions
 	elem.addEventListener('touchstart', function(event){
-		startY = event.touches[0].pageY;
 		startTopScroll = elem.scrollTop;
+		startLeftScroll = elem.scrollLeft;
 		
 		if(startTopScroll <= 0)
 			elem.scrollTop = 1;
 
 		if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
 			elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+		
+		if(startLeftScroll <= 0)
+			elem.scrollLeft = 1;
+			
+		if(startLeftScroll + elem.offsetWidth >= elem.scrollWidth)
+			elem.scrollLeft = elem.scrollWidth - elem.offsetWidth - 1;
 	}, false);
 };
