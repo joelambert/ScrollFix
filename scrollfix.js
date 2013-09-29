@@ -9,7 +9,7 @@
 
 var ScrollFix = function(elem) {
 	// Variables to track inputs
-	var startY, startTopScroll;
+	var startY, startTopScroll = 0, disableScroll = false;
 	
 	elem = elem || document.querySelector(elem);
 	
@@ -25,7 +25,17 @@ var ScrollFix = function(elem) {
 		if(startTopScroll <= 0)
 			elem.scrollTop = 1;
 
-		if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
-			elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+		if(startTopScroll + elem.clientHeight >= elem.scrollHeight)
+			elem.scrollTop = elem.scrollHeight - elem.clientHeight - 1;
+    
+    disableScroll = (elem.scrollHeight <= elem.clientHeight);
 	}, false);
+  
+  // Page should not scroll when the content does not fill the area
+  elem.addEventListener('touchmove', function(event){
+    if(disableScroll) {
+      event.preventDefault();
+    }
+  }, false);
+  
 };
