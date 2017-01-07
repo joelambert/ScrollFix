@@ -7,6 +7,17 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 
+// Test via a getter in the options object to see 
+// if the passive property is accessed
+var supportsPassive = false;
+document.createElement("div").addEventListener("test", function() {}, {
+	get passive() {
+    	supportsPassive = true;
+  		return false;
+	}
+});
+
+
 var ScrollFix = function(elem) {
 	// Variables to track inputs
 	var startY, startTopScroll;
@@ -27,5 +38,5 @@ var ScrollFix = function(elem) {
 
 		if(startTopScroll + elem.offsetHeight >= elem.scrollHeight)
 			elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
-	}, false);
+	}, supportsPassive ? { passive: true } : false);
 };
